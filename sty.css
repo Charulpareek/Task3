@@ -1,0 +1,147 @@
+/* Body styles with a vibrant gradient background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f093fb, #f5576c); /* Vibrant gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Align items in a column */
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 20px; /* Space between header and card */
+}
+
+h1 {
+    font-size: 28px;
+    color: black; /* Changed to black */
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Container styling with a soft card-like look */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Card styling with floating circle accents for a dynamic design */
+.card {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(240, 147, 251, 0.2);
+    border-radius: 50%;
+    top: -70px;
+    right: -70px;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(245, 87, 108, 0.2);
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+}
+
+/* Input section with margin */
+.input-section {
+    margin-bottom: 25px;
+}
+
+/* Input and select styling with soft shadow and rounded edges */
+input[type="number"], select {
+    width: 85%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #f0f3f7;
+    color: #333;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input[type="number"]:focus, select:focus {
+    box-shadow: 0 0 10px rgba(240, 147, 251, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Convert button with animated gradient background */
+.convert-btn {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+}
+
+.convert-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(245, 87, 108, 0.6);
+}
+
+.convert-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Result section with a soft background and hover effect */
+.result {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    padding: 15px;
+    background-color: #f0f3f7; /* Soft background */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.result:hover {
+    background-color: #f093fb; /* Change to gradient color on hover */
+    color: white; /* Text color change on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+
+    input[type="number"], select {
+        width: 100%;
+    }
+}
